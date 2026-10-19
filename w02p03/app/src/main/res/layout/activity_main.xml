@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3"/>
+
+    <TextView
+        android:id="@+id/textView_x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="x ="
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"/>
+    <EditText
+        android:id="@+id/editText_x"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/gl_01"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/textView_x"
+        android:layout_marginRight="30dp"
+        android:textSize="28sp"
+        android:inputType="numberDecimal|numberSigned"/>
+
+    <TextView
+        android:id="@+id/textView_y"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="y ="
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_x"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"/>
+    <EditText
+        android:id="@+id/editText_y"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/gl_01"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/textView_y"
+        android:layout_marginRight="30dp"
+        android:textSize="28sp"
+        android:inputType="numberDecimal|numberSigned"/>
+
+    <Button
+        android:id="@+id/btn_oblicz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Oblicz"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="30dp"
+        android:onClick="oblicz"/>
+    <TextView
+        android:id="@+id/textView_wynik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        app:layout_constraintTop_toBottomOf="@id/editText_y"
+        app:layout_constraintBottom_toTopOf="@id/btn_oblicz"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
