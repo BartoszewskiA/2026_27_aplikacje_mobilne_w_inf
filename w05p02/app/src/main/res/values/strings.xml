@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">w05p02</string>
+    <string name="powitanie_pl">Witaj Świecie!</string>
+    <string name="powitanie_en">Hello World!</string>
+    <string name="radioButton_1_opis">Język polski</string>
+    <string name="radioButton_2_opis">Język angielski</string>
+</resources>
